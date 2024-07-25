@@ -8,7 +8,7 @@ def home(request, *args, **kwargs):
     queryset = PageVisits.objects.all()
     context = {
       'title': title,
-      'queryset': queryset.count()
+      'count': queryset.count()
     }
     template = 'home.html'
     PageVisits.objects.create()
