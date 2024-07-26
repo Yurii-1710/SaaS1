@@ -12,4 +12,6 @@ def home(request, *args, **kwargs):
     }
     template = 'home.html'
     PageVisits.objects.create()
+    
+    print(request.user.is_authenticated, request.user)
     return render(request, template, context)
